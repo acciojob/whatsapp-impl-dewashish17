@@ -36,7 +36,7 @@ public class WhatsappRepository {
         //Otherwise, create the user and return "SUCCESS"
         if(userMobile.contains(mobile))
         {
-            throw new Exception("user already created");
+            throw new Exception("User already exists");
         }
         userMobile.add(mobile);
         this.users.put(mobile,new User(name,mobile));
@@ -116,7 +116,7 @@ public class WhatsappRepository {
         }
         if(!groupUserMap.get(group).contains(user))
         {
-            throw new Exception("User is not aparticipant");
+            throw new Exception("User is not a participant");
         }
         adminMap.put(group,user);
 
