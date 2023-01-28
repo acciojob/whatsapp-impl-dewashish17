@@ -112,7 +112,7 @@ public class WhatsappRepository {
         }
         if(!adminMap.get(group).equals(approver))
         {
-            throw new Exception("Approver does not exist");
+            throw new Exception("Approver does not have rights");
         }
         if(!groupUserMap.get(group).contains(user))
         {
@@ -121,7 +121,7 @@ public class WhatsappRepository {
         adminMap.put(group,user);
 
 
-        return "Success";
+        return "SUCCESS";
     }
 
 
